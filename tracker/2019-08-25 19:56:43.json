@@ -1,0 +1,15 @@
+{
+    "0": {
+        "window": "GitKraken",
+        "seconds": 2,
+        "hours": 0.0005555555555555556
+    },
+    "1": {
+        "window": "Visual Studio Code",
+        "seconds": 137,
+        "hours": 0.03805555555555555
+    },
+    "spent_seconds": 139,
+    "spent_hours": 0.0386111111111111,
+    "git_branch": "master\n"
+}

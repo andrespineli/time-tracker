@@ -1,0 +1,15 @@
+{
+    "0": {
+        "window": "GitKraken",
+        "seconds": 1,
+        "hours": 0.0002777777777777778
+    },
+    "1": {
+        "window": "Visual Studio Code",
+        "seconds": 67,
+        "hours": 0.018611111111111113
+    },
+    "spent_seconds": 68,
+    "spent_hours": 0.01888888888888889,
+    "git_branch": "feature\/tracker-phar\n"
+}
