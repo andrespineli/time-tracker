@@ -8,13 +8,17 @@ use TimeTracker\Collection;
 
 class Windows extends Collection
 {
-    public function registerActivity(string $keyWord)
+    private $branch;
+
+    public function registerActivity(string $keyWord, string $branch, string $fileName)
     {
+        $this->branch = $branch;
         foreach ($this->array as $key => $window) {
+ 
             if ($window->name() ==  $keyWord) {
                 $window->secondIncrease();
                 $this->array[$key] = $window;
-                Config::register($this->json());
+                Config::register($this->json(), $fileName);
                 return;
             }
         }
@@ -42,6 +46,8 @@ class Windows extends Collection
             return $value['hours'];
         }, $json));
 
-        return json_encode($json, JSON_PRETTY_PRINT);
+        $json['git_branch'] = $this->branch;
+
+        return json_encode($json, JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES);
     }
 }

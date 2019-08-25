@@ -14,4 +14,9 @@ class LinuxCommand implements OSCommand
         preg_match('/"(.*?)"/', $command, $matches);
         return $matches[1];
     }
+
+    public function getCurrentGitBranch()
+    {
+        return shell_exec("git branch | grep \* | cut -d ' ' -f2");
+    }
 }

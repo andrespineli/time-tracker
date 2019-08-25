@@ -13,15 +13,8 @@ class Config
         return array_map('trim', $words);
     }
     
-    public static function register($register)
-    {
-        $today = new \DateTime('now', new \DateTimeZone('America/Sao_Paulo'));
-        $d = $today->format('d');
-        $m = $today->format('m');
-        $y = $today->format('Y');
-
-        $fileName = "{$today->format('Y')}-{$today->format('m')}-{$today->format('d')}";
-        
+    public static function register($register, $fileName)
+    {  
         file_put_contents("./result/{$fileName}.json", $register);
     }
 }
